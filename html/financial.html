@@ -26,6 +26,8 @@
         }
     </script>
     <style>
+        /* Added max-width and overflow locks to html and body to guarantee no horizontal scrolling */
+        html, body { max-width: 100%; overflow-x: hidden; position: relative; }
         html.lenis { height: auto; } .lenis.lenis-smooth { scroll-behavior: auto; }
         .nav-link::before { content: ''; position: absolute; top: -12px; left: 0; width: 100%; height: 3px; background-color: #DE3B17; transform: scaleX(0); transition: transform 0.3s ease; }
         .group:hover .nav-link::before { transform: scaleX(1); }
@@ -163,9 +165,11 @@
         </div>
     </div>
 
-    <main class="pt-24 bg-white">
+    <!-- ADDED overflow-hidden to main to prevent AOS horizontal stretching -->
+    <main class="pt-24 bg-white overflow-hidden">
         <!-- ================= HERO (LEFT ALIGNED) ================= -->
-        <header class="py-20 md:py-28 relative border-b border-gray-100">
+        <!-- ADDED overflow-hidden -->
+        <header class="py-20 md:py-28 relative border-b border-gray-100 overflow-hidden">
             <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
                 <div class="max-w-4xl text-left" data-aos="fade-right">
                     
@@ -189,7 +193,8 @@
         </header>
 
         <!-- ================= CONTENT SECTION (LEFT ALIGNED) ================= -->
-        <section class="py-20 md:py-28">
+        <!-- ADDED overflow-hidden -->
+        <section class="py-20 md:py-28 overflow-hidden">
             <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
                 
                 <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -283,7 +288,10 @@
         <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             <div>
                 <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-12 w-auto object-contain bg-white rounded-lg p-1 mb-6">
-                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">Sustainable Power, Brighter Future.<br>Precision engineering renewable energy systems since 1998.</p>
+                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">
+                    Sustainable Power, Brighter Future.<br>
+                    Precision engineering renewable energy systems since 1998.
+                </p>
                 <div class="flex gap-4">
                     <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Instagram</a>
                     <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Facebook</a>
@@ -350,7 +358,7 @@
         mobileMenuClose.addEventListener('click', toggleMenu);
         mobileOverlay.addEventListener('click', toggleMenu);
 
-        // Mobile Accordion Logic - Fixed
+        // Mobile Accordion Logic
         document.querySelectorAll('.mobile-accordion-btn').forEach(acc => {
             acc.addEventListener('click', function() {
                 const content = this.nextElementSibling;

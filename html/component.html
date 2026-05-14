@@ -163,7 +163,8 @@
         </div>
     </div>
 
-    <main class="pt-24 bg-white">
+    <!-- ADDED overflow-hidden to main to prevent AOS horizontal stretching -->
+    <main class="pt-24 bg-white overflow-hidden">
         <!-- ================= HERO (BALANCED 2-COLUMN ALIGNED) ================= -->
         <header class="py-20 md:py-28 relative border-b border-gray-100 overflow-hidden">
             <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
@@ -204,7 +205,8 @@
         </header>
 
         <!-- ================= CONTENT SECTION (RIGHT ALIGNED) ================= -->
-        <section class="py-20 md:py-28">
+        <!-- ADDED overflow-hidden -->
+        <section class="py-20 md:py-28 overflow-hidden">
             <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
                 
                 <div class="flex flex-col lg:flex-row-reverse gap-16 lg:gap-24 items-start">
@@ -378,23 +380,13 @@
         mobileMenuClose.addEventListener('click', toggleMenu);
         mobileOverlay.addEventListener('click', toggleMenu);
 
-        // Mobile Accordion Logic - Fixed
+        // Mobile Accordion Logic
         document.querySelectorAll('.mobile-accordion-btn').forEach(acc => {
             acc.addEventListener('click', function() {
-                // Find the next element sibling that contains the links
                 const content = this.nextElementSibling;
                 const icon = this.querySelector('.lucide-chevron-down');
-                
-                // Toggle the hidden class on the content
-                if (content.classList.contains('hidden')) {
-                    content.classList.remove('hidden');
-                    content.classList.add('block');
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    content.classList.remove('block');
-                    content.classList.add('hidden');
-                    icon.style.transform = 'rotate(0deg)';
-                }
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
             });
         });
     </script>
