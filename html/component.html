@@ -60,7 +60,6 @@
                 </li>
 
                 <li class="relative h-full py-4 group cursor-pointer">
-                    <!-- FIXED: Removed brand-orange, added default gray with hover -->
                     <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
                         Automation <i data-lucide="chevron-down" class="w-4 h-4"></i>
                     </a>
@@ -74,7 +73,6 @@
                 </li>
 
                 <li class="relative h-full py-4 group cursor-pointer">
-                    <!-- FIXED: Added brand-orange to mark as active -->
                     <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
                         Govt Schemes <i data-lucide="chevron-down" class="w-4 h-4"></i>
                     </a>
@@ -131,7 +129,6 @@
             </div>
 
             <div>
-                <!-- FIXED: Removed brand-orange, added default navy with hover -->
                 <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
                     Automation <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
                 </button>
@@ -143,7 +140,6 @@
             </div>
 
             <div>
-                <!-- FIXED: Added brand-orange to mark as active -->
                 <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-orange uppercase tracking-wide transition-colors">
                     Govt Schemes <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
                 </button>
@@ -280,10 +276,10 @@
                                     <span class="font-bold text-gray-700 text-sm tracking-widest uppercase">Deye</span>
                                 </div>
                                 <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm">
-                                    <span class="font-bold text-gray-700 text-sm tracking-widest uppercase">Power-One</span>
+                                    <span class="font-bold text-gray-700 text-sm tracking-widest uppercase">Enphase</span>
                                 </div>
                                 <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm">
-                                    <span class="font-bold text-gray-700 text-sm tracking-widest uppercase">Enphase</span>
+                                    <span class="font-bold text-gray-700 text-sm tracking-widest uppercase">UTL Solar</span>
                                 </div>
                             </div>
                         </div>
@@ -382,13 +378,23 @@
         mobileMenuClose.addEventListener('click', toggleMenu);
         mobileOverlay.addEventListener('click', toggleMenu);
 
-        // Mobile Accordion Logic
+        // Mobile Accordion Logic - Fixed
         document.querySelectorAll('.mobile-accordion-btn').forEach(acc => {
             acc.addEventListener('click', function() {
+                // Find the next element sibling that contains the links
                 const content = this.nextElementSibling;
                 const icon = this.querySelector('.lucide-chevron-down');
-                content.classList.toggle('hidden');
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                
+                // Toggle the hidden class on the content
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.remove('block');
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
             });
         });
     </script>

@@ -350,12 +350,21 @@
         mobileMenuClose.addEventListener('click', toggleMenu);
         mobileOverlay.addEventListener('click', toggleMenu);
 
+        // Mobile Accordion Logic - Fixed
         document.querySelectorAll('.mobile-accordion-btn').forEach(acc => {
             acc.addEventListener('click', function() {
                 const content = this.nextElementSibling;
                 const icon = this.querySelector('.lucide-chevron-down');
-                content.classList.toggle('hidden');
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.remove('block');
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
             });
         });
     </script>
