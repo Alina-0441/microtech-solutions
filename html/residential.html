@@ -175,12 +175,12 @@
         <div class="relative z-20 w-full mx-auto px-6 md:px-12 lg:px-16 max-w-[1400px]">
             <div class="max-w-3xl" data-aos="fade-up">
                 <div class="flex items-center gap-2 mb-4 md:mb-6 text-xs md:text-sm font-bold uppercase tracking-wider">
-                    <a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange"></i>
-                    <span class="text-gray-400 hidden sm:inline">Infrastructure</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange hidden sm:inline"></i>
-                    <span class="text-brand-orange">Residential</span>
-                </div>
+                        <a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange"></i>
+                        <span class="text-gray-400">Infrastructure</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange"></i>
+                        <span class="text-brand-orange">Residential</span>
+                    </div>
                 
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight uppercase tracking-tighter mb-4">
                     Residential <br class="md:hidden"><span class="text-brand-orange">Solutions.</span>
@@ -303,7 +303,6 @@
                 <h2 class="text-3xl md:text-5xl font-heading font-black text-white mb-3 md:mb-4">Ready to power your home?</h2>
                 <p class="text-white/90 text-sm md:text-lg font-light">Claim your ₹78,000 subsidy and flexible EMI financing today.</p>
             </div>
-            <!-- Updated the link directly to contact.html -->
             <a href="contact.html" class="inline-block w-full sm:w-auto bg-white text-brand-orange lg:hover:bg-brand-navy lg:hover:text-white font-bold py-4 px-10 md:px-12 rounded-xl shadow-xl uppercase tracking-wider text-sm transition-all duration-300 shrink-0">
                 Book a Free Site Survey
             </a>
@@ -376,6 +375,7 @@
             else navbar.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-md');
         });
 
+        // Trigger Reveal Animation
         const revealContainer = document.getElementById('scroll-reveal-container');
         if (revealContainer) {
             const observer = new IntersectionObserver((entries) => {
