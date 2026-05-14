@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are | Microtech Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Nunito"', 'sans-serif'], heading: ['"Poppins"', 'sans-serif'] },
+                    colors: { brand: { orange: '#DE3B17', navy: '#0A192F', dark: '#020C1B', light: '#F8FAFC', eco: '#84CC16' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        html.lenis { height: auto; } .lenis.lenis-smooth { scroll-behavior: auto; }
+        .nav-link::before { content: ''; position: absolute; top: -12px; left: 0; width: 100%; height: 3px; background-color: #DE3B17; transform: scaleX(0); transition: transform 0.3s ease; }
+        .group:hover .nav-link::before { transform: scaleX(1); }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="fixed w-full z-40 transition-all duration-300 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="w-full mx-auto px-4 md:px-8 lg:px-12 py-3 flex justify-between items-center relative">
+            <a href="../index.html" class="flex items-center z-50">
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" decoding="async" class="h-12 md:h-14 w-auto object-contain rounded-lg mix-blend-multiply">
+            </a>
+
+            <ul class="hidden lg:flex items-center gap-10 h-full">
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="../index.html" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors">Home</a>
+                </li>
+                
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        Infrastructure <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="residential.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Residential Solutions</a></li>
+                            <li><a href="commercial.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Commercial Grids</a></li>
+                            <li><a href="storage.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Energy Storage</a></li>
+                            <li><a href="security.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Smart Security</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        Automation <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="architectural-design.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Architectural Design</a></li>
+                            <li><a href="govt-documentation.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Govt Documentation</a></li>
+                            <li><a href="deployment-monitoring.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Deployment & Monitoring</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        Govt Schemes <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="subsidy.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Subsidy Programs</a></li>
+                            <li><a href="financial.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Financial Assistance</a></li>
+                            <li><a href="component.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Component Warranty</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        About Us <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-48 bg-white shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="whoweare.html" class="block px-6 py-3 text-sm font-bold text-brand-orange bg-orange-50 transition">Who We Are</a></li>
+                            <li><a href="contact.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-brand-navy p-2 hover:text-brand-orange transition-colors z-50">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-brand-navy/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="mobile-sidebar" class="fixed top-0 right-0 h-full w-[85%] sm:w-[350px] bg-white z-[70] transform translate-x-full transition-transform duration-300 ease-out shadow-2xl flex flex-col">
+        <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <p class="font-heading font-bold text-brand-navy uppercase tracking-widest text-xs">Navigation</p>
+            <button id="mobile-menu-close" class="p-2 text-gray-400 hover:text-brand-orange transition-colors bg-white rounded-full shadow-sm border border-gray-100">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto py-6 px-6 space-y-1">
+            <a href="../index.html" class="block py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide">Home</a>
+            
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
+                    Infrastructure <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="residential.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Residential</a>
+                    <a href="commercial.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Commercial Grids</a>
+                    <a href="storage.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Energy Storage</a>
+                    <a href="security.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Smart Security</a>
+                </div>
+            </div>
+
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
+                    Automation <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="architectural-design.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Architectural Design</a>
+                    <a href="govt-documentation.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Govt Documentation</a>
+                    <a href="deployment-monitoring.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Deployment & Monitoring</a>
+                </div>
+            </div>
+
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
+                    Govt Schemes <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="subsidy.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Subsidy Programs</a>
+                    <a href="financial.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Financial Assistance</a>
+                    <a href="component.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Component Warranty</a>
+                </div>
+            </div>
+
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-orange uppercase tracking-wide transition-colors">
+                    About Us <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="block pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="whoweare.html" class="block text-brand-orange font-bold text-sm uppercase tracking-wide">Who We Are</a>
+                    <a href="contact.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Contact Us</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <main class="pt-24">
+        
+        <!-- Updated Elegant White Header -->
+        <header class="relative pt-24 pb-20 md:pt-36 md:pb-28 bg-white text-center overflow-hidden border-b border-gray-100">
+            <!-- Subtle background gradient for premium depth -->
+            <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-50 via-white to-white pointer-events-none"></div>
+            
+            <div class="max-w-5xl mx-auto px-6 relative z-10" data-aos="fade-up">
+                <div class="inline-flex items-center justify-center bg-white border border-gray-200 px-5 py-2 rounded-full mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange mr-3 animate-pulse"></span>
+                    <p class="text-brand-navy font-bold tracking-widest text-[10px] md:text-xs uppercase">Since 1998 in Kerala</p>
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-brand-navy uppercase tracking-tighter leading-[1.1]">
+                    Our Legacy of <br><span class="text-brand-orange">Energy & Trust.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-500 mt-8 font-light leading-relaxed max-w-3xl mx-auto">
+                    For over 25 years, Microtech Solutions has evolved from a local electrical pioneer to the premier architect of advanced, uninterrupted solar infrastructure across the state.
+                </p>
+            </div>
+        </header>
+
+        <!-- ================= THE STORY SECTION ================= -->
+        <section class="py-20 md:py-28 bg-white border-b border-gray-100">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-brand-navy mb-8">The "Smart" Philosophy.</h2>
+                    
+                    <div class="prose prose-lg text-gray-600 font-light leading-relaxed">
+                        <p class="mb-6">
+                            <strong class="text-brand-navy font-bold">"Your home might be smart, but what about your electricity?"</strong>
+                        </p>
+                        <p class="mb-6">
+                            This fundamental question drives our entire engineering process. In an era where homes are connected and automated, relying on an unstable electrical grid is obsolete. We specialize in transforming homes into genuinely intelligent spaces by making the electricity source itself smart, reliable, and completely self-sustaining.
+                        </p>
+                        <p class="mb-6">
+                            Whether you need an On-Grid system to eliminate your power bills, an Off-Grid setup for total independence, or a Hybrid ecosystem that offers the best of both worlds, Microtech Solutions engineers it perfectly. We provide flexible storage solutions and Wi-Fi monitoring that guarantee zero power cuts—giving you uninterrupted electricity, 24 hours a day.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex items-center gap-3">
+                            <i data-lucide="wifi" class="text-brand-orange w-5 h-5"></i>
+                            <span class="text-sm font-bold text-brand-navy">Wi-Fi Monitoring</span>
+                        </div>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex items-center gap-3">
+                            <i data-lucide="battery-charging" class="text-brand-orange w-5 h-5"></i>
+                            <span class="text-sm font-bold text-brand-navy">Flexible Storage</span>
+                        </div>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex items-center gap-3">
+                            <i data-lucide="zap-off" class="text-brand-orange w-5 h-5"></i>
+                            <span class="text-sm font-bold text-brand-navy">Zero Power Cuts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative h-[450px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group" data-aos="fade-left">
+                    <img src="../css/assets/images/whowearepage.jpg" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" alt="Microtech Philosophy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8 text-white">
+                        <div class="w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center mb-4 shadow-lg">
+                            <i data-lucide="sun" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="font-heading font-black text-2xl mb-2">Uninterrupted Power</h3>
+                        <p class="text-sm font-light text-gray-200">24 hours a day, seamlessly integrated.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MISSION & VISION ================= -->
+        <section class="py-20 md:py-28 bg-brand-light">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                    
+                    <!-- Mission -->
+                    <div class="bg-white p-10 md:p-14 rounded-3xl shadow-lg border border-gray-100 relative overflow-hidden" data-aos="fade-up">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-full -z-0"></div>
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-brand-orange/10 rounded-2xl flex items-center justify-center mb-8">
+                                <i data-lucide="target" class="w-8 h-8 text-brand-orange"></i>
+                            </div>
+                            <h3 class="text-3xl font-heading font-black text-brand-navy mb-6">Our Mission</h3>
+                            <p class="text-gray-600 font-light leading-relaxed text-lg">
+                                To engineer and deliver premium, highly efficient solar and home automation systems that completely eliminate grid dependency. We strive to provide every client with a flawless transition to renewable energy, ensuring zero power cuts and absolute peace of mind through military-grade components.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-brand-navy p-10 md:p-14 rounded-3xl shadow-lg border border-brand-navy relative overflow-hidden text-white" data-aos="fade-up" data-aos-delay="100">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -z-0"></div>
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                                <i data-lucide="eye" class="w-8 h-8 text-brand-orange"></i>
+                            </div>
+                            <h3 class="text-3xl font-heading font-black text-white mb-6">Our Vision</h3>
+                            <p class="text-gray-300 font-light leading-relaxed text-lg">
+                                To be the definitive foundation of Kerala's sustainable future. We envision a landscape where every residential and commercial infrastructure operates on smart, decentralized, and 100% renewable energy ecosystems, fostering a cleaner and more technologically advanced tomorrow.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= GOVERNMENT & PARTNERSHIPS ================= -->
+        <section class="py-20 md:py-28 bg-white">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <div class="lg:col-span-5" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-heading font-black text-brand-navy mb-6">Official & <br>Empanelled Experts</h2>
+                    <p class="text-gray-600 leading-relaxed font-light mb-8 text-lg">
+                        We don't just sell solar panels; we architect state-level energy independence. As a registered entity with the Ministry of MSME, Govt. of India, and fully empaneled with MNRE and KSEB, every installation meets the highest regulatory standards. 
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-orange font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">PM Surya Ghar Partner</h4>
+                                <p class="text-sm text-gray-500 font-light mt-1">Official registered partner to execute the PM Surya Ghar Muft Bijli Yojana.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-orange font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">₹78,000/- Direct Subsidy</h4>
+                                <p class="text-sm text-gray-500 font-light mt-1">We handle the complete documentation for your government subsidy claims.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-orange font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">90% Bank Loan Facilitation</h4>
+                                <p class="text-sm text-gray-500 font-light mt-1">Easy financial transitions with up to 90% capital coverage.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-7" data-aos="fade-left">
+                    <div class="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-200">
+                        <div class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1.5 rounded-full mb-8 shadow-sm">
+                            <p class="text-brand-navy font-bold tracking-widest text-[10px] md:text-xs uppercase">Up to 30 Years Warranty*</p>
+                        </div>
+                        <h3 class="text-2xl font-heading font-black text-brand-navy mb-8">Premium Component Partners</h3>
+                        
+                        <p class="text-gray-500 font-light mb-10 text-sm leading-relaxed">
+                            To deliver a 30-year operational lifespan, we exclusively utilize military-grade and industry-leading components. Our technology partners represent the pinnacle of global solar manufacturing.
+                        </p>
+
+                        <!-- Adjusted grid to 4 columns to perfectly fit the 8 remaining logos without odd spacing -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-70">
+                            <img src="../css/assets/logos/waaree.jpg" alt="Waaree" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/adani.png" alt="Adani" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/luminous.png" alt="Luminous" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/microtek.png" alt="Microtek" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/Polycab.png" alt="Polycab" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/deye.png" alt="Deye" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/enphase.png" alt="Enphase" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                            <img src="../css/assets/logos/utlsolar.png" alt="UTL Solar" loading="lazy" decoding="async" class="h-8 md:h-10 w-auto object-contain hover:opacity-100 transition-opacity mix-blend-multiply">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#020813] pt-16 pb-6 text-white relative border-t-[3px] border-brand-orange">
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+            <div>
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" loading="lazy" decoding="async" class="h-12 w-auto object-contain bg-white rounded-lg p-1 mb-6">
+                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">
+                    Sustainable Power, Brighter Future.<br>
+                    Precision engineering renewable energy systems since 1998.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">LinkedIn</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Capabilities</h4>
+                <ul class="space-y-3 text-gray-400 text-sm font-bold">
+                    <li><a href="residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
+                    <li><a href="commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
+                    <li><a href="storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
+                    <li><a href="security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Compliance</h4>
+                <ul class="space-y-3 text-gray-400 text-sm font-bold">
+                    <li>KSEB Registered</li>
+                    <li>Ministry of MSME</li>
+                    <li>MNRE Accredited</li>
+                    <li>ANERT Approved</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Global HQ</h4>
+                <ul class="space-y-4 text-gray-400 text-sm font-bold">
+                    <li class="leading-relaxed">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
+                    <li>Phone: 94002 61169 / 88481 94008</li>
+                    <li>WhatsApp: 89212 88112</li>
+                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all">microtechsolarsolutions@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold gap-4 text-center md:text-left">
+            <p>&copy; 2026 MICROTECH SOLUTIONS GLOBAL. ALL RIGHTS RESERVED.</p>            
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 600, once: true });
+        
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function toggleMenu() {
+            mobileSidebar.classList.toggle('translate-x-full');
+            mobileOverlay.classList.toggle('opacity-0');
+            mobileOverlay.classList.toggle('pointer-events-none');
+            document.body.style.overflow = mobileSidebar.classList.contains('translate-x-full') ? '' : 'hidden';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuClose.addEventListener('click', toggleMenu);
+        mobileOverlay.addEventListener('click', toggleMenu);
+
+        document.querySelectorAll('.mobile-accordion-btn').forEach(acc => {
+            acc.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.lucide-chevron-down');
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+    </script>
+</body>
+</html>

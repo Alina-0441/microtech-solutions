@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Storage | Microtech Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { sans: ['"Nunito"', 'sans-serif'], heading: ['"Poppins"', 'sans-serif'] }, 
+                    colors: { brand: { orange: '#DE3B17', navy: '#0A192F', dark: '#020C1B', light: '#F8FAFC', eco: '#84CC16' } },
+                    animation: { 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite', 'flow': 'flow 3s linear infinite' },
+                    keyframes: { flow: { '0%': { strokeDashoffset: '100' }, '100%': { strokeDashoffset: '0' } } }
+                } 
+            } 
+        }
+    </script>
+    <style>
+        html.lenis { height: auto; } .lenis.lenis-smooth { scroll-behavior: auto; }
+        .nav-link::before { content: ''; position: absolute; top: -12px; left: 0; width: 100%; height: 3px; background-color: #DE3B17; transform: scaleX(0); transition: transform 0.3s ease; }
+        .group:hover .nav-link::before { transform: scaleX(1); }
+        .energy-line { stroke-dasharray: 10 10; animation: flow 2s linear infinite reverse; }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
+
+    <!-- ================= NAVBAR (Desktop Guardrail) ================= -->
+    <nav class="fixed w-full z-40 transition-all duration-300 bg-white shadow-sm border-b border-gray-100" id="navbar">
+        <div class="w-full mx-auto px-4 md:px-8 lg:px-12 py-3 flex justify-between items-center relative">
+            <a href="../index.html" class="flex items-center z-50">
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-12 md:h-14 w-auto object-contain rounded-lg mix-blend-multiply">
+            </a>
+
+            <ul class="hidden lg:flex items-center gap-10 h-full">
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="../index.html" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors">Home</a>
+                </li>
+                
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        Infrastructure <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-64 bg-white/95 backdrop-blur-xl shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="residential.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Residential Solutions</a></li>
+                            <li><a href="commercial.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Commercial Grids</a></li>
+                            <li><a href="storage.html" class="block px-6 py-3 text-sm font-bold text-brand-orange bg-orange-50 transition">Energy Storage</a></li>
+                            <li><a href="security.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Smart Security</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        Automation <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-64 bg-white/95 backdrop-blur-xl shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="architectural-design.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Architectural Design</a></li>
+                            <li><a href="govt-documentation.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Govt Documentation</a></li>
+                            <li><a href="deployment-monitoring.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Deployment & Monitoring</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        Govt Schemes <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-64 bg-white/95 backdrop-blur-xl shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="subsidy.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Subsidy Programs</a></li>
+                            <li><a href="financial.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Financial Assistance</a></li>
+                            <li><a href="component.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Component Warranty</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="relative h-full py-4 group cursor-pointer">
+                    <a href="#" class="nav-link relative text-[14px] font-heading font-bold text-gray-700 hover:text-brand-orange uppercase tracking-wide transition-colors flex items-center gap-1">
+                        About Us <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-0 w-48 bg-white/95 backdrop-blur-xl shadow-xl border border-gray-100 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                        <ul class="py-2">
+                            <li><a href="whoweare.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Who We Are</a></li>
+                            <li><a href="contact.html" class="block px-6 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange hover:bg-orange-50 transition">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-brand-navy p-2 hover:text-brand-orange transition-colors z-50">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================= MOBILE SIDEBAR MENU ================= -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-brand-navy/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    
+    <div id="mobile-sidebar" class="fixed top-0 right-0 h-full w-[85%] sm:w-[350px] bg-white z-[70] transform translate-x-full transition-transform duration-300 ease-out shadow-2xl flex flex-col">
+        <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <p class="font-heading font-bold text-brand-navy uppercase tracking-widest text-xs">Navigation</p>
+            <button id="mobile-menu-close" class="p-2 text-gray-400 hover:text-brand-orange transition-colors bg-white rounded-full shadow-sm border border-gray-100">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto py-6 px-6 space-y-1">
+            <a href="../index.html" class="block py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide">Home</a>
+            
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-orange uppercase tracking-wide transition-colors">
+                    Infrastructure <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="block pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="residential.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Residential</a>
+                    <a href="commercial.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Commercial Grids</a>
+                    <a href="storage.html" class="block text-brand-orange font-bold text-sm uppercase tracking-wide">Energy Storage</a>
+                    <a href="security.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Smart Security</a>
+                </div>
+            </div>
+
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
+                    Automation <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="architectural-design.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Architectural Design</a>
+                    <a href="govt-documentation.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Govt Documentation</a>
+                    <a href="deployment-monitoring.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Deployment & Monitoring</a>
+                </div>
+            </div>
+
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
+                    Govt Schemes <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="subsidy.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Subsidy Programs</a>
+                    <a href="financial.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Financial Assistance</a>
+                    <a href="component.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Component Warranty</a>
+                </div>
+            </div>
+
+            <div>
+                <button class="mobile-accordion-btn w-full flex justify-between items-center py-3 text-base font-heading font-semibold text-brand-navy hover:text-brand-orange uppercase tracking-wide transition-colors">
+                    About Us <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden pl-4 py-2 space-y-4 border-l border-brand-orange/30 ml-2 mt-1 mb-2">
+                    <a href="whoweare.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Who We Are</a>
+                    <a href="contact.html" class="block text-gray-500 font-medium hover:text-brand-orange text-sm uppercase tracking-wide">Contact Us</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= TECHNICAL TYPOGRAPHIC HERO ================= -->
+    <header class="relative w-full bg-white pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden border-b border-gray-100">
+        <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none hidden md:flex">
+            <svg width="800" height="800" viewBox="0 0 100 100" fill="none" class="animate-[spin_60s_linear_infinite]">
+                <circle cx="50" cy="50" r="48" stroke="#0A192F" stroke-width="0.2"/>
+                <circle cx="50" cy="50" r="35" stroke="#0A192F" stroke-dasharray="1 2" stroke-width="0.5"/>
+                <path d="M50 0 V100 M0 50 H100" stroke="#0A192F" stroke-width="0.1"/>
+            </svg>
+        </div>
+        <div class="absolute top-0 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-brand-orange rounded-full blur-[100px] md:blur-[150px] opacity-10 pointer-events-none"></div>
+
+        <div class="relative z-20 w-full mx-auto px-6 md:px-12 lg:px-16 max-w-[1400px]">
+            <div class="max-w-5xl mx-auto text-center" data-aos="zoom-in" data-aos-duration="800">
+                <div class="flex items-center justify-center gap-2 mb-6 md:mb-8 text-xs md:text-sm font-bold uppercase tracking-wider">
+                    <a href="../index.html" class="text-gray-500 hover:text-brand-navy transition-colors">Home</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange"></i>
+                    <span class="text-gray-500 hidden sm:inline">Infrastructure</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange hidden sm:inline"></i>
+                    <span class="text-brand-orange">Storage</span>
+                </div>
+                
+                <div class="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-100 shadow-sm relative z-20">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                    <span class="text-[10px] md:text-xs font-black text-brand-orange uppercase tracking-widest">Active Reserve Systems</span>
+                </div>
+
+                <!-- Central 3D Video Loop -->
+                <div class="w-32 h-32 md:w-52 md:h-52 mx-auto my-4 md:my-6 mix-blend-multiply relative z-10 pointer-events-none rounded-full overflow-hidden flex items-center justify-center">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover scale-[1.35]">
+                        <source src="../css/assets/videos/output.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <h1 class="text-4xl md:text-7xl lg:text-8xl font-heading font-black text-brand-navy leading-[1.1] tracking-tighter relative z-20 mb-4 md:mb-6">
+                    The Ultimate<br>
+                    <span class="text-brand-orange">Energy Vault.</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= BENTO BOX FEATURE GRID ================= -->
+    <section class="py-16 md:py-24 bg-brand-light relative overflow-hidden border-b border-gray-200/60">
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+            
+            <div class="mb-12 md:mb-16 text-center max-w-3xl mx-auto" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-heading font-black text-brand-navy mb-4">Command Your Power.</h2>
+                <p class="text-gray-500 font-light text-base md:text-lg">Advanced battery technology designed specifically for peak performance, maximum financial return, and uncompromising longevity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto">
+                <div class="md:col-span-8 bg-white rounded-3xl p-6 md:p-12 border border-gray-100 shadow-sm flex flex-col justify-between relative overflow-hidden group min-h-[350px] md:min-h-[400px]" data-aos="fade-up">
+                    <div class="relative z-10 max-w-2xl">
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-orange-50 border border-orange-100 rounded-xl flex items-center justify-center mb-6 md:mb-8 shadow-sm">
+                            <i data-lucide="zap" class="w-6 h-6 md:w-7 md:h-7 text-brand-orange"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-4xl font-heading font-black text-brand-navy mb-4">Millisecond Switchover Protocol</h3>
+                        <p class="text-gray-600 font-light text-base md:text-lg leading-relaxed mb-8">
+                            Our hybrid inverter ecosystems operate as an active Uninterruptible Power Supply (UPS). The moment the primary grid drops, the intelligent gateway transfers your entire building load to the battery vault within <strong class="text-brand-navy font-bold">10 milliseconds</strong>.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mt-auto">
+                            <div class="flex items-center gap-3 text-sm text-gray-700 font-bold">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-orange shrink-0"></i> Zero Interruption
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700 font-bold">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-orange shrink-0"></i> Pure Sine Wave
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700 font-bold">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-orange shrink-0"></i> Auto-Sync
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-20 -right-20 w-64 h-64 md:w-80 md:h-80 bg-brand-navy/5 rounded-full blur-3xl group-hover:bg-brand-orange/10 transition-colors duration-700 pointer-events-none"></div>
+                </div>
+
+                <div class="md:col-span-4 bg-orange-50 rounded-3xl p-8 md:p-10 border border-orange-100 shadow-sm flex flex-col justify-center text-center min-h-[350px] md:min-h-[400px]" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="battery-charging" class="w-12 h-12 md:w-14 md:h-14 text-brand-orange mx-auto mb-6"></i>
+                    <p class="text-5xl md:text-7xl font-heading font-black text-brand-navy mb-2">Up to 30<span class="text-xl md:text-2xl text-brand-orange">Yrs</span></p>
+                    <p class="text-xs md:text-sm font-black text-brand-orange uppercase tracking-widest">Performance Warranty</p>
+                    <p class="text-gray-600 font-light text-sm mt-6 leading-relaxed">
+                        Utilizing ultra-premium LiFePO4 chemistry and Tier-1 components, our systems ensure over a decade of continuous daily capability without significant capacity degradation.
+                    </p>
+                </div>
+
+                <div class="md:col-span-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col overflow-hidden group" data-aos="fade-up">
+                    <div class="h-48 md:h-52 overflow-hidden relative">
+                        <img src="../css/assets/images/smartloadshifting.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Flexible Energy Storage">
+                    </div>
+                    <div class="p-6 md:p-8 flex-1">
+                        <h4 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-2 md:mb-3">Flexible Energy Storage (ESS)</h4>
+                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed">
+                            Wifi/Monitoring available. Intelligently store surplus solar generation during the day and automatically deploy it during expensive evening peak-tariff hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 md:h-52 overflow-hidden relative">
+                        <img src="../css/assets/images/modularscalability.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Modular Scalability">
+                    </div>
+                    <div class="p-6 md:p-8 flex-1">
+                        <h4 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-2 md:mb-3">Modular Scalability</h4>
+                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed">
+                            Future-proof investment. Start with a core 5kWh backup and stack additional high-voltage modules in parallel as demand grows.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 md:h-52 overflow-hidden relative">
+                        <img src="../css/assets/images/thermalmanagement.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Thermal Management">
+                    </div>
+                    <div class="p-6 md:p-8 flex-1">
+                        <h4 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-2 md:mb-3">Thermal Management</h4>
+                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed">
+                            Prioritizing safety in all operations. Military-grade BMS constantly monitors individual cell voltage and temperature to prevent thermal runaway.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EXPANDED CONTENT ================= -->
+    <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-start">
+                
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-brand-navy leading-[1.2] mb-6 md:mb-8">
+                        Operational Intelligence & <br><span class="text-brand-orange inline-block mt-2 md:mt-1">Precision Control.</span>
+                    </h2>
+                    <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed mb-8 md:mb-10">
+                        Energy storage is no longer just about "backup." It is about active financial and operational intelligence. Our ESS (Energy Storage System) comes equipped with cloud-connected AI that analyzes your usage patterns to ensure your batteries are always at the optimal state of charge when the grid is most vulnerable.
+                    </p>
+                    
+                    <div class="space-y-8 md:space-y-10">
+                        <div class="flex gap-4 md:gap-6">
+                            <div class="w-12 h-12 rounded-full bg-brand-navy flex items-center justify-center shrink-0">
+                                <i data-lucide="cloud-lightning" class="w-6 h-6 text-brand-orange"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-heading font-black text-brand-navy mb-2">Cloud-Synced Monitoring</h4>
+                                <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Track every watt-hour of stored energy from your smartphone. Receive real-time alerts on system health, backup duration, and ROI performance.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 md:gap-6">
+                            <div class="w-12 h-12 rounded-full bg-brand-navy flex items-center justify-center shrink-0">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-brand-orange"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-heading font-black text-brand-navy mb-2">LiFePO4 Chemistry Superiority</h4>
+                                <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">We exclusively use Cobalt-free Lithium Iron Phosphate cells. This technology is non-combustible, environmentally friendly, and offers twice the lifespan of standard Lithium-Ion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" data-aos="fade-up">
+                    <div class="p-6 md:p-8 bg-brand-light rounded-3xl border border-gray-100">
+                        <p class="text-3xl md:text-4xl font-heading font-black text-brand-navy mb-2">100<span class="text-brand-orange">%</span></p>
+                        <p class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 md:mb-4">Depth of Discharge</p>
+                        <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Extract every bit of energy you paid for without harming the battery's chemical integrity.</p>
+                    </div>
+                    <div class="p-6 md:p-8 bg-brand-light rounded-3xl border border-gray-100">
+                        <p class="text-3xl md:text-4xl font-heading font-black text-brand-navy mb-2">0.5<span class="text-brand-orange">C</span></p>
+                        <p class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 md:mb-4">Rapid Charge Rate</p>
+                        <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Achieve full capacity in under 2 hours, ensuring you're ready for the next scheduled or unscheduled outage.</p>
+                    </div>
+                    <div class="md:col-span-2 p-6 md:p-8 bg-brand-navy rounded-3xl border border-brand-navy shadow-xl relative overflow-hidden mt-2 md:mt-0">
+                        <div class="relative z-10">
+                            <h4 class="text-lg md:text-xl font-heading font-black text-white mb-3 md:mb-4">Compliance & Safety</h4>
+                            <p class="text-gray-400 text-xs md:text-sm font-light leading-relaxed mb-5 md:mb-6">Our Energy Vaults meet strict IEC 62619, CE, and UN38.3 standards for industrial energy storage safety. Integrated fire suppression compatibility and high-voltage circuit breakers come standard.</p>
+                            <div class="flex flex-wrap gap-2 md:gap-4">
+                                <span class="px-2 md:px-3 py-1 bg-white/10 text-white text-[9px] md:text-[10px] font-bold rounded-full border border-white/10">IEC CERTIFIED</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/10 text-white text-[9px] md:text-[10px] font-bold rounded-full border border-white/10">UL COMPLIANT</span>
+                                <span class="px-2 md:px-3 py-1 bg-white/10 text-white text-[9px] md:text-[10px] font-bold rounded-full border border-white/10">IP65 RATED</span>
+                            </div>
+                        </div>
+                        <div class="absolute -right-10 -bottom-10 opacity-10">
+                            <i data-lucide="shield" class="w-40 h-40 md:w-48 md:h-48 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#020813] pt-16 pb-6 text-white relative border-t-[3px] border-brand-orange">
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+            <div>
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-12 w-auto object-contain bg-white rounded-lg p-1 mb-6">
+                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">Sustainable Power, Brighter Future.<br>Precision engineering renewable energy systems since 1998.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">LinkedIn</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Capabilities</h4>
+                <ul class="space-y-3 text-gray-400 text-sm font-bold">
+                    <li><a href="residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
+                    <li><a href="commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
+                    <li><a href="storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
+                    <li><a href="security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Compliance</h4>
+                <ul class="space-y-3 text-gray-400 text-sm font-bold">
+                    <li>KSEB Empanelled</li>
+                    <li>Ministry of MSME</li>
+                    <li>MNRE & ANERT Approved</li>
+                    <li>ISO 14001:2015 Certified</li>
+                    <li>Soura & GeM Empanelled</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Global HQ</h4>
+                <ul class="space-y-4 text-gray-400 text-sm font-bold">
+                    <li class="leading-relaxed">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
+                    <li>Phone: 94002 61169 / 88481 94008</li>
+                    <li>WhatsApp: 89212 88112</li>
+                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all">microtechsolarsolutions@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold gap-4 text-center md:text-left">
+            <p>&copy; 2026 MICROTECH SOLUTIONS GLOBAL. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 600, once: true, offset: 0, easing: 'ease-out-cubic' });
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf);
+        
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-md');
+            else navbar.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-md');
+        });
+
+        // ================= MOBILE MENU LOGIC =================
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function toggleMenu() {
+            mobileSidebar.classList.toggle('translate-x-full');
+            mobileOverlay.classList.toggle('opacity-0');
+            mobileOverlay.classList.toggle('pointer-events-none');
+            document.body.style.overflow = mobileSidebar.classList.contains('translate-x-full') ? '' : 'hidden';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuClose.addEventListener('click', toggleMenu);
+        mobileOverlay.addEventListener('click', toggleMenu);
+
+        const accordions = document.querySelectorAll('.mobile-accordion-btn');
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.lucide-chevron-down');
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+    </script>
+</body>
+</html>
