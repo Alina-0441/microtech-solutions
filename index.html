@@ -212,8 +212,8 @@
                 <!-- Slide 1: Residential (EAGER LOAD) -->
                 <div class="swiper-slide relative">
                     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-transparent z-10"></div>
-                    <img src="./css/assets/images/smarthomesmobile.jpg" fetchpriority="high" class="block md:hidden absolute inset-0 w-full h-full object-cover object-center" alt="Smart Homes">
-                    <img src="./css/assets/images/smarthomes.jpg" fetchpriority="high" class="hidden md:block absolute inset-0 w-full h-full object-cover object-center" alt="Smart Homes">
+                    <img src="./css/assets/images/smarthomesmobile.jpg" fetchpriority="high" class="block md:hidden absolute inset-0 w-full h-full object-cover object-center transform-gpu" alt="Smart Homes">
+                    <img src="./css/assets/images/smarthomes.jpg" fetchpriority="high" class="hidden md:block absolute inset-0 w-full h-full object-cover object-center transform-gpu" alt="Smart Homes">
                     
                     <div class="relative z-20 h-full flex flex-col justify-end md:justify-center items-start w-full mx-auto px-6 pb-24 md:pb-0 md:px-12 lg:px-16 max-w-[1400px]">
                         <div class="max-w-3xl opacity-0 animate-hero-fade-up">
@@ -232,11 +232,11 @@
                     </div>
                 </div>
 
-                <!-- Slide 2: Commercial (LAZY LOAD) -->
+                <!-- Slide 2: Commercial -->
                 <div class="swiper-slide relative">
                     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-transparent z-10"></div>
-                    <img src="./css/assets/images/solarenterprisemobile.jpg" loading="lazy" decoding="async" class="block md:hidden absolute inset-0 w-full h-full object-cover object-center" alt="Commercial Solar">
-                    <img src="./css/assets/images/solarenterprise.jpg" loading="lazy" decoding="async" class="hidden md:block absolute inset-0 w-full h-full object-cover object-center" alt="Commercial Solar">
+                    <img src="./css/assets/images/solarenterprisemobile.jpg" class="block md:hidden absolute inset-0 w-full h-full object-cover object-center transform-gpu" alt="Commercial Solar">
+                    <img src="./css/assets/images/solarenterprise.jpg" class="hidden md:block absolute inset-0 w-full h-full object-cover object-center transform-gpu" alt="Commercial Solar">
                     
                     <div class="relative z-20 h-full flex flex-col justify-end md:justify-center items-start w-full mx-auto px-6 pb-24 md:pb-0 md:px-12 lg:px-16 max-w-[1400px]">
                         <div class="max-w-3xl opacity-0 animate-hero-fade-up">
@@ -255,11 +255,11 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Storage (LAZY LOAD) -->
+                <!-- Slide 3: Storage -->
                 <div class="swiper-slide relative">
                     <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-brand-navy/95 via-brand-navy/70 to-transparent z-10"></div>
-                    <img src="./css/assets/images/zeropowercutmobile.jpg" loading="lazy" decoding="async" class="block md:hidden absolute inset-0 w-full h-full object-cover object-center" alt="Energy Vault">
-                    <img src="./css/assets/images/zeropowercut.jpg" loading="lazy" decoding="async" class="hidden md:block absolute inset-0 w-full h-full object-cover object-center" alt="Energy Vault">
+                    <img src="./css/assets/images/zeropowercutmobile.jpg" class="block md:hidden absolute inset-0 w-full h-full object-cover object-center transform-gpu" alt="Energy Vault">
+                    <img src="./css/assets/images/zeropowercut.jpg" class="hidden md:block absolute inset-0 w-full h-full object-cover object-center transform-gpu" alt="Energy Vault">
                     
                     <div class="relative z-20 h-full flex flex-col justify-end md:justify-center items-start w-full mx-auto px-6 pb-24 md:pb-0 md:px-12 lg:px-16 max-w-[1400px]">
                         <div class="max-w-3xl opacity-0 animate-hero-fade-up">
@@ -483,7 +483,7 @@
             <!-- Static Image Block -->
             <div class="relative h-[550px] hidden lg:block" id="why-choose-images" data-aos="fade-left">
                 <div class="absolute top-0 right-0 w-[90%] h-[450px] rounded-2xl overflow-hidden shadow-xl z-10 img-layer-1">
-                    <img src="./css/assets/images/solarenterprise.jpg" loading="lazy" decoding="async" class="w-full h-full object-cover" alt="Solar Installation">
+                    <img src="./css/assets/images/why.jpg" loading="lazy" decoding="async" class="w-full h-full object-cover" alt="Why Choose Us">
                 </div>
                 <div class="absolute bottom-4 left-0 w-[65%] bg-white shadow-2xl z-20 p-8 rounded-xl img-layer-2 border border-gray-100">
                     <div class="flex items-center gap-5 mb-5">
@@ -630,9 +630,24 @@
         const swiper = new Swiper('.heroSwiper', {
             loop: true,
             effect: 'fade',
-            speed: 700,
-            autoplay: { delay: 4000, disableOnInteraction: false },
+            fadeEffect: {
+                crossFade: true // Fixes the overlapping/stuck visual glitch
+            },
+            speed: 800, // Smoother transition
+            autoplay: { delay: 4500, disableOnInteraction: false },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            grabCursor: true,
+            on: {
+                slideChangeTransitionStart: function () {
+                    // Re-trigger the text animation on every slide change
+                    const animatedElements = document.querySelectorAll('.animate-hero-fade-up');
+                    animatedElements.forEach(el => {
+                        el.style.animation = 'none';
+                        el.offsetHeight; /* trigger reflow */
+                        el.style.animation = null; 
+                    });
+                }
+            }
         });
 
         // Simplified Navbar toggle
