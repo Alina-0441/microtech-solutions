@@ -35,6 +35,15 @@
         /* Subtle hover scale for bento boxes */
         .bento-card { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; will-change: transform; }
         .bento-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(10, 25, 47, 0.08); }
+
+        /* Custom Justify to prevent massive word gaps */
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
     </style>
 </head>
 <body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
@@ -208,10 +217,10 @@
                 <h2 class="text-3xl md:text-5xl lg:text-5xl font-heading font-black text-brand-navy leading-tight mb-8">
                     Every installation begins with intelligent design.
                 </h2>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 font-light text-justify-custom">
                     At Microtech Solutions, we believe that superior performance starts on the drawing board. Our dedicated in-house engineering team goes beyond simple rooftop measurements. We utilize continuous technological innovations to deliver proven expertise.
                 </p>
-                <p class="text-base md:text-lg text-gray-600 leading-relaxed font-light">
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed font-light text-justify-custom">
                     From meticulous <strong>drone-assisted 3D topographical models</strong> to deep shadow mapping, we calculate exactly where each military-grade panel should sit to guarantee maximum year-round irradiance and ensure your investment delivers for the next 30 years.
                 </p>
             </div>
@@ -254,17 +263,17 @@
                 <p class="text-lg text-gray-500 font-light max-w-2xl mx-auto">Complete involvement, dedication, and commitment from site assessment to commissioning.</p>
             </div>
 
-            <!-- Removed auto-rows-fr on mobile to prevent excessive empty height -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-fr">
+            <!-- 5-column grid for precise card proportion control -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 
-                <!-- Box 1: Structural Analysis (Spans 2 columns on desktop) -->
-                <div class="md:col-span-2 bg-white rounded-3xl p-8 md:p-12 border border-gray-100 bento-card relative overflow-hidden group" data-aos="fade-up">
-                    <div class="relative z-10 w-full md:w-2/3">
+                <!-- Box 1: Structural Analysis (Spans 3 columns) -->
+                <div class="md:col-span-2 lg:col-span-3 bg-white rounded-3xl p-8 md:p-12 border border-gray-100 bento-card relative overflow-hidden group" data-aos="fade-up">
+                    <div class="relative z-10 w-full lg:pr-12">
                         <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 border border-orange-100">
                             <i data-lucide="shield" class="w-7 h-7 text-brand-orange"></i>
                         </div>
                         <h3 class="text-2xl font-heading font-black text-brand-navy mb-4">Structural & Load Analysis</h3>
-                        <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        <p class="text-gray-600 font-light leading-relaxed mb-6 text-justify-custom">
                             We calculate more than just solar yield; we calculate safety. Our engineers conduct rigorous wind-load and dead-load analyses. This guarantees that your roof or ground-mount structure safely supports the entire array, enduring extreme weather conditions for the lifetime of the system.
                         </p>
                         <ul class="space-y-2 text-sm font-bold text-brand-navy">
@@ -276,47 +285,47 @@
                     <i data-lucide="layers" class="absolute -bottom-10 -right-10 w-64 h-64 text-gray-50 opacity-[0.3] transform group-hover:scale-110 transition-transform duration-700 pointer-events-none"></i>
                 </div>
 
-                <!-- Box 2: Shadow Mapping (1 column) -->
-                <div class="bg-brand-navy rounded-3xl p-8 md:p-12 border border-brand-navy bento-card relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                <!-- Box 2: Shadow Mapping (Spans 2 columns) -->
+                <div class="md:col-span-1 lg:col-span-2 bg-brand-navy rounded-3xl p-8 md:p-12 border border-brand-navy bento-card relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 border border-white/5">
                             <i data-lucide="sun" class="w-7 h-7 text-brand-orange"></i>
                         </div>
                         <h3 class="text-2xl font-heading font-black text-white mb-4">3D Shadow Mapping</h3>
-                        <p class="text-gray-300 font-light leading-relaxed">
+                        <p class="text-gray-300 font-light leading-relaxed text-justify-custom">
                             Using exact coordinates and sun-path tracking algorithms, we map potential shadows from nearby trees and structures to ensure peak efficiency all year round. This meticulous planning prevents micro-shading losses and maximizes your overall return on investment.
                         </p>
                     </div>
                 </div>
 
-                <!-- Box 3: ERP System (1 column) -->
-                <div class="bg-orange-50 rounded-3xl p-8 md:p-12 border border-orange-100 bento-card relative overflow-hidden group" data-aos="fade-up" data-aos-delay="150">
+                <!-- Box 3: ERP System (Spans 2 columns) -->
+                <div class="md:col-span-1 lg:col-span-2 bg-orange-50 rounded-3xl p-8 md:p-12 border border-orange-100 bento-card relative overflow-hidden group" data-aos="fade-up" data-aos-delay="150">
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-gray-100">
                             <i data-lucide="network" class="w-7 h-7 text-brand-orange"></i>
                         </div>
                         <h3 class="text-2xl font-heading font-black text-brand-navy mb-4">ERP Integration</h3>
-                        <p class="text-gray-600 font-light leading-relaxed">
+                        <p class="text-gray-600 font-light leading-relaxed text-justify-custom">
                             State-of-the-art technology-based ERP systems manage project workflows, logging customer data, and ensuring a seamless handover to our installation teams. Clients enjoy streamlined inventory management and real-time tracking of their solar project from documentation to commissioning.
                         </p>
                     </div>
                 </div>
 
-                <!-- Box 4: Aesthetic Integration (Spans 2 columns on desktop) -->
-                <div class="md:col-span-2 bg-white rounded-3xl p-8 md:p-12 border border-gray-100 bento-card flex flex-col md:flex-row items-center gap-8 group" data-aos="fade-up" data-aos-delay="200">
+                <!-- Box 4: Aesthetic Integration (Spans 3 columns) -->
+                <div class="md:col-span-2 lg:col-span-3 bg-white rounded-3xl p-8 md:p-12 border border-gray-100 bento-card flex flex-col lg:flex-row items-center gap-8 group" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex-1">
                         <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 border border-orange-100">
                             <i data-lucide="layout-grid" class="w-7 h-7 text-brand-orange"></i>
                         </div>
                         <h3 class="text-2xl font-heading font-black text-brand-navy mb-4">Aesthetic & Scheme Alignment</h3>
-                        <p class="text-gray-600 font-light leading-relaxed mb-4">
+                        <p class="text-gray-600 font-light leading-relaxed mb-4 text-justify-custom">
                             Solar panels shouldn't just work flawlessly; they should look exceptional. We design arrays that complement the architecture of your home or commercial building.
                         </p>
-                        <p class="text-gray-600 font-light leading-relaxed">
+                        <p class="text-gray-600 font-light leading-relaxed text-justify-custom">
                             Furthermore, our designs are pre-aligned with KSEB, MNRE, and ANERT compliance standards, ensuring that when it's time to claim your <strong>PM Surya Ghar subsidy (up to ₹78,000)</strong>, the technical documentation is already perfect.
                         </p>
                     </div>
-                    <div class="w-full md:w-1/3 rounded-2xl overflow-hidden h-48 md:h-full relative shrink-0">
+                    <div class="w-full lg:w-1/3 rounded-2xl overflow-hidden h-48 lg:h-full relative shrink-0">
                         <img src="../css/assets/images/aesthetic.jpg" alt="Aesthetic Solar Layout" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
@@ -326,49 +335,55 @@
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="bg-[#020813] pt-16 pb-6 text-white relative border-t-[3px] border-brand-orange">
-        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-            <div>
-                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-12 w-auto object-contain bg-white rounded-lg p-1 mb-6">
-                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">
+<footer class="bg-[#020813] pt-16 pb-6 text-white relative border-t-[3px] border-brand-orange">
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+            
+            <!-- Brand Column -->
+            <div class="flex flex-col items-start">
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-14 w-auto object-contain bg-white rounded-lg p-1.5 mb-6">
+                <p class="text-gray-400 leading-relaxed text-sm font-light lg:pr-6">
                     Sustainable Power, Brighter Future.<br>
                     Precision engineering renewable energy systems since 1998.
                 </p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Instagram</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Facebook</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">LinkedIn</a>
-                </div>
             </div>
+            
+            <!-- Capabilities Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Capabilities</h4>
                 <ul class="space-y-3 text-gray-400 text-sm font-bold">
-                    <li><a href="residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
-                    <li><a href="commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
-                    <li><a href="storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
-                    <li><a href="security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
+                    <li><a href="html/residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
+                    <li><a href="html/commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
+                    <li><a href="html/storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
+                    <li><a href="html/security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
                 </ul>
             </div>
+            
+            <!-- Compliance Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Compliance</h4>
                 <ul class="space-y-3 text-gray-400 text-sm font-bold">
-                    <li>KSEB Registered</li>
+                    <li>KSEB Empanelled</li>
                     <li>Ministry of MSME</li>
-                    <li>MNRE Accredited</li>
-                    <li>ANERT Approved</li>
+                    <li>MNRE & ANERT Approved</li>
+                    <li>ISO 14001:2015 Certified</li>
+                    <li>Soura & GeM Empanelled</li>
                 </ul>
             </div>
+            
+            <!-- Global HQ Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Global HQ</h4>
                 <ul class="space-y-4 text-gray-400 text-sm font-bold">
-                    <li class="leading-relaxed">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
-                    <li>Phone: 94002 61169</li>
-                    <li>WhatsApp: 89212 88112</li>
-                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all">microtechsolarsolutions@gmail.com</a></li>
+                    <li class="leading-relaxed font-light">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
+                    <li><span class="font-light text-gray-500 mr-2">Phone:</span> 94002 61169</li>
+                    <li><span class="font-light text-gray-500 mr-2">WhatsApp:</span> 89212 88112</li>
+                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all font-light">microtechsolarsolutions@gmail.com</a></li>
                 </ul>
             </div>
+
         </div>
-        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold gap-4 text-center md:text-left">
+        
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex items-center justify-center md:justify-start text-[12px] text-gray-500 font-bold text-center">
             <p>&copy; 2026 MICROTECH SOLUTIONS GLOBAL. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>

@@ -26,6 +26,15 @@
         html.lenis { height: auto; } .lenis.lenis-smooth { scroll-behavior: auto; }
         .nav-link::before { content: ''; position: absolute; top: -12px; left: 0; width: 100%; height: 3px; background-color: #DE3B17; transform: scaleX(0); transition: transform 0.3s ease; }
         .group:hover .nav-link::before { transform: scaleX(1); }
+
+        /* Custom Justify to prevent massive word gaps */
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
     </style>
 </head>
 <body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
@@ -210,13 +219,13 @@
                 </h2>
                 
                 <div class="space-y-4 md:space-y-6 text-gray-600 font-light leading-relaxed text-sm md:text-lg">
-                    <p>
+                    <p class="text-justify-custom">
                         Enterprises today face immense pressure from consistently rising electricity tariffs and strict environmental compliance standards. Microtech Solutions specializes in designing, developing, and installing utility-scale and industrial photovoltaic systems. 
                     </p>
-                    <p>
+                    <p class="text-justify-custom">
                         Whether it's Roof-top, Ground-mounted, or Floating solar power plants, Microtech provides bespoke enterprise solutions. By transitioning to a Microtech Commercial Grid, businesses significantly reduce their Levelized Cost of Energy (LCOE) while completely insulating themselves from grid price volatility.
                     </p>
-                    <p>
+                    <p class="text-justify-custom">
                         Furthermore, corporate clients can unlock immediate financial benefits. Our systems are eligible for <strong class="text-brand-navy font-bold">Accelerated Depreciation (AD)</strong> under the Income Tax Act, allowing you to write off up to 40% of the project cost in the first year alone.
                     </p>
                 </div>
@@ -259,7 +268,7 @@
                         <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6 text-brand-orange"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-3 md:mb-4">Financial Intelligence</h3>
-                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-light mb-2">
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-light mb-2 text-justify-custom">
                         Protect your operating margins against rising energy costs. Benefit from customized OPEX/CAPEX models, Accelerated Depreciation, and seamless institutional financing/EMI options designed for scale.
                     </p>
                 </div>
@@ -269,7 +278,7 @@
                         <i data-lucide="cpu" class="w-5 h-5 md:w-6 md:h-6 text-brand-orange"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-3 md:mb-4">Uncompromising Quality</h3>
-                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-light mb-2">
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-light mb-2 text-justify-custom">
                         We deploy only Tier-1 brand authorized modules. We maintain high standards and ISO 14001:2015 procedures to ensure the ultimate safety and quality of our services in all our operations.
                     </p>
                 </div>
@@ -279,7 +288,7 @@
                         <i data-lucide="globe-2" class="w-5 h-5 md:w-6 md:h-6 text-brand-orange"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-3 md:mb-4">ESG & Sustainability</h3>
-                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-light mb-2">
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed font-light mb-2 text-justify-custom">
                         Elevate your corporate profile. Generate clean energy on-site, completely align with your commitment to promoting sustainable energy solutions, and meet stringent environmental compliance metrics effortlessly.
                     </p>
                 </div>
@@ -302,69 +311,78 @@
                     <div class="hidden md:block absolute top-6 left-[50%] w-full h-[1px] bg-gray-200"></div>
                     <span class="text-5xl font-heading font-black text-brand-orange lg:text-gray-200 lg:group-hover:text-brand-orange transition-colors duration-300 absolute left-0 top-0 md:relative md:-ml-2 z-10 bg-white pr-4">01</span>
                     <h4 class="text-lg font-heading font-black text-brand-navy mt-1 md:mt-4 mb-2 lg:group-hover:text-brand-orange transition-colors">Feasibility & Audit</h4>
-                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Comprehensive load analysis, shadow mapping, and structural roof integrity checks.</p>
+                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">Comprehensive load analysis, shadow mapping, and structural roof integrity checks.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="100" class="relative pl-24 md:pl-0 group cursor-pointer">
                     <div class="hidden md:block absolute top-6 left-[50%] w-full h-[1px] bg-gray-200"></div>
                     <span class="text-5xl font-heading font-black text-brand-orange lg:text-gray-200 lg:group-hover:text-brand-orange transition-colors duration-300 absolute left-0 top-0 md:relative md:-ml-2 z-10 bg-white pr-4">02</span>
                     <h4 class="text-lg font-heading font-black text-brand-navy mt-1 md:mt-4 mb-2 lg:group-hover:text-brand-orange transition-colors">System Architecture</h4>
-                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Custom 3D CAD modeling, electrical schematic design, and exact yield forecasting.</p>
+                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">Custom 3D CAD modeling, electrical schematic design, and exact yield forecasting.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200" class="relative pl-24 md:pl-0 group cursor-pointer">
                     <div class="hidden md:block absolute top-6 left-[50%] w-full h-[1px] bg-gray-200"></div>
                     <span class="text-5xl font-heading font-black text-brand-orange lg:text-gray-200 lg:group-hover:text-brand-orange transition-colors duration-300 absolute left-0 top-0 md:relative md:-ml-2 z-10 bg-white pr-4">03</span>
                     <h4 class="text-lg font-heading font-black text-brand-navy mt-1 md:mt-4 mb-2 lg:group-hover:text-brand-orange transition-colors">Swift Installation</h4>
-                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">We guarantee a rapid installation process, minimizing disruption to your daily routine while maintaining absolute safety.</p>
+                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">We guarantee a rapid installation process, minimizing disruption to your daily routine while maintaining absolute safety.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300" class="relative pl-24 md:pl-0 group cursor-pointer">
                     <span class="text-5xl font-heading font-black text-brand-orange lg:text-gray-200 lg:group-hover:text-brand-orange transition-colors duration-300 absolute left-0 top-0 md:relative md:-ml-2 z-10 bg-white pr-4">04</span>
                     <h4 class="text-lg font-heading font-black text-brand-navy mt-1 md:mt-4 mb-2 lg:group-hover:text-brand-orange transition-colors">Active Telemetry & ERP</h4>
-                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">State-of-art technology based ERP system to manage corrective maintenance with a web-based application to log complaints 24/7.</p>
+                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">State-of-art technology based ERP system to manage corrective maintenance with a web-based application to log complaints 24/7.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-[#020813] pt-16 pb-6 text-white relative border-t-[3px] border-brand-orange">
-        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-            <div>
-                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-12 w-auto object-contain bg-white rounded-lg p-1 mb-6">
-                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">Sustainable Power, Brighter Future.<br>Precision engineering renewable energy systems since 1998.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Instagram</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Facebook</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">LinkedIn</a>
-                </div>
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+            
+            <!-- Brand Column -->
+            <div class="flex flex-col items-start">
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-14 w-auto object-contain bg-white rounded-lg p-1.5 mb-6">
+                <p class="text-gray-400 leading-relaxed text-sm font-light lg:pr-6">
+                    Sustainable Power, Brighter Future.<br>
+                    Precision engineering renewable energy systems since 1998.
+                </p>
             </div>
+            
+            <!-- Capabilities Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Capabilities</h4>
                 <ul class="space-y-3 text-gray-400 text-sm font-bold">
-                    <li><a href="residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
-                    <li><a href="commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
-                    <li><a href="storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
-                    <li><a href="security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
+                    <li><a href="html/residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
+                    <li><a href="html/commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
+                    <li><a href="html/storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
+                    <li><a href="html/security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
                 </ul>
             </div>
+            
+            <!-- Compliance Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Compliance</h4>
                 <ul class="space-y-3 text-gray-400 text-sm font-bold">
-                    <li>KSEB Registered</li>
+                    <li>KSEB Empanelled</li>
                     <li>Ministry of MSME</li>
-                    <li>MNRE Accredited</li>
-                    <li>ANERT Approved</li>
+                    <li>MNRE & ANERT Approved</li>
+                    <li>ISO 14001:2015 Certified</li>
+                    <li>Soura & GeM Empanelled</li>
                 </ul>
             </div>
+            
+            <!-- Global HQ Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Global HQ</h4>
                 <ul class="space-y-4 text-gray-400 text-sm font-bold">
-                    <li class="leading-relaxed">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
-                    <li>Phone: 94002 61169</li>
-                    <li>WhatsApp: 89212 88112</li>
-                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all">microtechsolarsolutions@gmail.com</a></li>
+                    <li class="leading-relaxed font-light">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
+                    <li><span class="font-light text-gray-500 mr-2">Phone:</span> 94002 61169</li>
+                    <li><span class="font-light text-gray-500 mr-2">WhatsApp:</span> 89212 88112</li>
+                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all font-light">microtechsolarsolutions@gmail.com</a></li>
                 </ul>
             </div>
+
         </div>
-        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold gap-4 text-center md:text-left">
+        
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex items-center justify-center md:justify-start text-[12px] text-gray-500 font-bold text-center">
             <p>&copy; 2026 MICROTECH SOLUTIONS GLOBAL. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>

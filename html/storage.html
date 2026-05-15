@@ -29,6 +29,14 @@
         .nav-link::before { content: ''; position: absolute; top: -12px; left: 0; width: 100%; height: 3px; background-color: #DE3B17; transform: scaleX(0); transition: transform 0.3s ease; }
         .group:hover .nav-link::before { transform: scaleX(1); }
         .energy-line { stroke-dasharray: 10 10; animation: flow 2s linear infinite reverse; }
+
+        /* Optimized Custom Justify to keep word spacing as identical as possible */
+        .text-justify-custom {
+            text-align: justify;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
     </style>
 </head>
 <body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden selection:bg-brand-orange selection:text-white">
@@ -222,7 +230,7 @@
                             <i data-lucide="zap" class="w-6 h-6 md:w-7 md:h-7 text-brand-orange"></i>
                         </div>
                         <h3 class="text-2xl md:text-4xl font-heading font-black text-brand-navy mb-4">Millisecond Switchover Protocol</h3>
-                        <p class="text-gray-600 font-light text-base md:text-lg leading-relaxed mb-8">
+                        <p class="text-gray-600 font-light text-base md:text-lg leading-relaxed mb-8 text-justify-custom">
                             Our hybrid inverter ecosystems operate as an active Uninterruptible Power Supply (UPS). The moment the primary grid drops, the intelligent gateway transfers your entire building load to the battery vault within <strong class="text-brand-navy font-bold">10 milliseconds</strong>.
                         </p>
                         
@@ -245,7 +253,7 @@
                     <i data-lucide="battery-charging" class="w-12 h-12 md:w-14 md:h-14 text-brand-orange mx-auto mb-6"></i>
                     <p class="text-5xl md:text-7xl font-heading font-black text-brand-navy mb-2">Up to 30<span class="text-xl md:text-2xl text-brand-orange">Yrs</span></p>
                     <p class="text-xs md:text-sm font-black text-brand-orange uppercase tracking-widest">Performance Warranty</p>
-                    <p class="text-gray-600 font-light text-sm mt-6 leading-relaxed">
+                    <p class="text-gray-600 font-light text-sm mt-6 leading-relaxed text-justify-custom">
                         Utilizing ultra-premium LiFePO4 chemistry and Tier-1 components, our systems ensure over a decade of continuous daily capability without significant capacity degradation.
                     </p>
                 </div>
@@ -256,7 +264,7 @@
                     </div>
                     <div class="p-6 md:p-8 flex-1">
                         <h4 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-2 md:mb-3">Flexible Energy Storage (ESS)</h4>
-                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed">
+                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed text-justify-custom">
                             Wifi/Monitoring available. Intelligently store surplus solar generation during the day and automatically deploy it during expensive evening peak-tariff hours.
                         </p>
                     </div>
@@ -268,7 +276,7 @@
                     </div>
                     <div class="p-6 md:p-8 flex-1">
                         <h4 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-2 md:mb-3">Modular Scalability</h4>
-                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed">
+                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed text-justify-custom">
                             Future-proof investment. Start with a core 5kWh backup and stack additional high-voltage modules in parallel as demand grows.
                         </p>
                     </div>
@@ -280,7 +288,7 @@
                     </div>
                     <div class="p-6 md:p-8 flex-1">
                         <h4 class="text-lg md:text-xl font-heading font-black text-brand-navy mb-2 md:mb-3">Thermal Management</h4>
-                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed">
+                        <p class="text-gray-500 font-light text-xs md:text-sm leading-relaxed text-justify-custom">
                             Prioritizing safety in all operations. Military-grade BMS constantly monitors individual cell voltage and temperature to prevent thermal runaway.
                         </p>
                     </div>
@@ -298,7 +306,7 @@
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-brand-navy leading-[1.2] mb-6 md:mb-8">
                         Operational Intelligence & <br><span class="text-brand-orange inline-block mt-2 md:mt-1">Precision Control.</span>
                     </h2>
-                    <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed mb-8 md:mb-10">
+                    <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed mb-8 md:mb-10 text-justify-custom">
                         Energy storage is no longer just about "backup." It is about active financial and operational intelligence. Our ESS (Energy Storage System) comes equipped with cloud-connected AI that analyzes your usage patterns to ensure your batteries are always at the optimal state of charge when the grid is most vulnerable.
                     </p>
                     
@@ -309,7 +317,7 @@
                             </div>
                             <div>
                                 <h4 class="text-base md:text-lg font-heading font-black text-brand-navy mb-2">Cloud-Synced Monitoring</h4>
-                                <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Track every watt-hour of stored energy from your smartphone. Receive real-time alerts on system health, backup duration, and ROI performance.</p>
+                                <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">Track every watt-hour of stored energy from your smartphone. Receive real-time alerts on system health, backup duration, and ROI performance.</p>
                             </div>
                         </div>
                         <div class="flex gap-4 md:gap-6">
@@ -318,7 +326,7 @@
                             </div>
                             <div>
                                 <h4 class="text-base md:text-lg font-heading font-black text-brand-navy mb-2">LiFePO4 Chemistry Superiority</h4>
-                                <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">We exclusively use Cobalt-free Lithium Iron Phosphate cells. This technology is non-combustible, environmentally friendly, and offers twice the lifespan of standard Lithium-Ion.</p>
+                                <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">We exclusively use Cobalt-free Lithium Iron Phosphate cells. This technology is non-combustible, environmentally friendly, and offers twice the lifespan of standard Lithium-Ion.</p>
                             </div>
                         </div>
                     </div>
@@ -328,17 +336,17 @@
                     <div class="p-6 md:p-8 bg-brand-light rounded-3xl border border-gray-100">
                         <p class="text-3xl md:text-4xl font-heading font-black text-brand-navy mb-2">100<span class="text-brand-orange">%</span></p>
                         <p class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 md:mb-4">Depth of Discharge</p>
-                        <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Extract every bit of energy you paid for without harming the battery's chemical integrity.</p>
+                        <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">Extract every bit of energy you paid for without harming the battery's chemical integrity.</p>
                     </div>
                     <div class="p-6 md:p-8 bg-brand-light rounded-3xl border border-gray-100">
                         <p class="text-3xl md:text-4xl font-heading font-black text-brand-navy mb-2">0.5<span class="text-brand-orange">C</span></p>
                         <p class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 md:mb-4">Rapid Charge Rate</p>
-                        <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">Achieve full capacity in under 2 hours, ensuring you're ready for the next scheduled or unscheduled outage.</p>
+                        <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed text-justify-custom">Achieve full capacity in under 2 hours, ensuring you're ready for the next scheduled or unscheduled outage.</p>
                     </div>
                     <div class="md:col-span-2 p-6 md:p-8 bg-brand-navy rounded-3xl border border-brand-navy shadow-xl relative overflow-hidden mt-2 md:mt-0">
                         <div class="relative z-10">
                             <h4 class="text-lg md:text-xl font-heading font-black text-white mb-3 md:mb-4">Compliance & Safety</h4>
-                            <p class="text-gray-400 text-xs md:text-sm font-light leading-relaxed mb-5 md:mb-6">Our Energy Vaults meet strict IEC 62619, CE, and UN38.3 standards for industrial energy storage safety. Integrated fire suppression compatibility and high-voltage circuit breakers come standard.</p>
+                            <p class="text-gray-400 text-xs md:text-sm font-light leading-relaxed mb-5 md:mb-6 text-justify-custom">Our Energy Vaults meet strict IEC 62619, CE, and UN38.3 standards for industrial energy storage safety. Integrated fire suppression compatibility and high-voltage circuit breakers come standard.</p>
                             <div class="flex flex-wrap gap-2 md:gap-4">
                                 <span class="px-2 md:px-3 py-1 bg-white/10 text-white text-[9px] md:text-[10px] font-bold rounded-full border border-white/10">IEC CERTIFIED</span>
                                 <span class="px-2 md:px-3 py-1 bg-white/10 text-white text-[9px] md:text-[10px] font-bold rounded-full border border-white/10">UL COMPLIANT</span>
@@ -357,25 +365,29 @@
 
     <!-- ================= FOOTER ================= -->
     <footer class="bg-[#020813] pt-16 pb-6 text-white relative border-t-[3px] border-brand-orange">
-        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-            <div>
-                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-12 w-auto object-contain bg-white rounded-lg p-1 mb-6">
-                <p class="text-gray-400 leading-relaxed text-sm mb-6 font-light">Sustainable Power, Brighter Future.<br>Precision engineering renewable energy systems since 1998.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Instagram</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">Facebook</a>
-                    <a href="#" class="text-gray-400 hover:text-brand-orange font-bold transition-colors">LinkedIn</a>
-                </div>
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+            
+            <!-- Brand Column -->
+            <div class="flex flex-col items-start">
+                <img src="../css/assets/logos/logo.jpeg" alt="Microtech Solutions" class="h-14 w-auto object-contain bg-white rounded-lg p-1.5 mb-6">
+                <p class="text-gray-400 leading-relaxed text-sm font-light lg:pr-6">
+                    Sustainable Power, Brighter Future.<br>
+                    Precision engineering renewable energy systems since 1998.
+                </p>
             </div>
+            
+            <!-- Capabilities Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Capabilities</h4>
                 <ul class="space-y-3 text-gray-400 text-sm font-bold">
-                    <li><a href="residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
-                    <li><a href="commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
-                    <li><a href="storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
-                    <li><a href="security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
+                    <li><a href="html/residential.html" class="hover:text-brand-orange transition-colors">Residential Systems</a></li>
+                    <li><a href="html/commercial.html" class="hover:text-brand-orange transition-colors">Commercial Grids</a></li>
+                    <li><a href="html/storage.html" class="hover:text-brand-orange transition-colors">Storage Ecosystems</a></li>
+                    <li><a href="html/security.html" class="hover:text-brand-orange transition-colors">Home Automation</a></li>
                 </ul>
             </div>
+            
+            <!-- Compliance Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Compliance</h4>
                 <ul class="space-y-3 text-gray-400 text-sm font-bold">
@@ -386,17 +398,21 @@
                     <li>Soura & GeM Empanelled</li>
                 </ul>
             </div>
+            
+            <!-- Global HQ Column -->
             <div>
                 <h4 class="font-heading font-black uppercase tracking-widest text-[12px] mb-6 text-white">Global HQ</h4>
                 <ul class="space-y-4 text-gray-400 text-sm font-bold">
-                    <li class="leading-relaxed">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
-                    <li>Phone: 94002 61169</li>
-                    <li>WhatsApp: 89212 88112</li>
-                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all">microtechsolarsolutions@gmail.com</a></li>
+                    <li class="leading-relaxed font-light">Kanjiramattom Temple Road,<br>Thodupuzha, Idukki,<br>Kerala - 685 584</li>
+                    <li><span class="font-light text-gray-500 mr-2">Phone:</span> 94002 61169</li>
+                    <li><span class="font-light text-gray-500 mr-2">WhatsApp:</span> 89212 88112</li>
+                    <li><a href="mailto:microtechsolarsolutions@gmail.com" class="hover:text-brand-orange transition-colors break-all font-light">microtechsolarsolutions@gmail.com</a></li>
                 </ul>
             </div>
+
         </div>
-        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold gap-4 text-center md:text-left">
+        
+        <div class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 pt-6 border-t border-white/10 flex items-center justify-center md:justify-start text-[12px] text-gray-500 font-bold text-center">
             <p>&copy; 2026 MICROTECH SOLUTIONS GLOBAL. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
